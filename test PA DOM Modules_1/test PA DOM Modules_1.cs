@@ -108,6 +108,7 @@ public class Script
 				behavior = new List<DomBehaviorDefinition> { domBehaviorDefinition };
 			}
 
+			// create dom definition
 			return new DomDefinition
 			{
 				Name = "Test Peacock Provision",
