@@ -45,7 +45,7 @@ Revision History:
 
 DATE		VERSION		AUTHOR			COMMENTS
 
-dd/mm/2023	1.0.0.1		XXX, Skyline	Initial version
+02/02/2023	1.0.0.1		GBS, Skyline	Initial version
 ****************************************************************************
 */
 
