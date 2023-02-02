@@ -81,7 +81,7 @@ public class Script
 			var domDefinition = domHelper.DomDefinitions.Read(DomDefinitionExposers.Name.Equal(peacockProvisionDomDefinition.Name));
 			if (domDefinition.Any())
 			{
-				peacockProvisionDomDefinition.ID = domDefinition.FirstOrDefault().ID;
+				peacockProvisionDomDefinition.ID = domDefinition.FirstOrDefault()?.ID;
 				domHelper.DomDefinitions.Update(peacockProvisionDomDefinition);
 			}
 			else
@@ -111,8 +111,8 @@ public class Script
 			return new DomDefinition
 			{
 				Name = "Test Peacock Provision",
-				SectionDefinitionLinks = new List<SectionDefinitionLink> { new SectionDefinitionLink(provisionInfoSectionDefinitions.FirstOrDefault().GetID()), new SectionDefinitionLink(domInstancesSectionDefinitions.FirstOrDefault().GetID()) },
-				DomBehaviorDefinitionId = behavior.FirstOrDefault().ID,
+				SectionDefinitionLinks = new List<SectionDefinitionLink> { new SectionDefinitionLink(provisionInfoSectionDefinitions.FirstOrDefault()?.GetID()), new SectionDefinitionLink(domInstancesSectionDefinitions.FirstOrDefault()?.GetID()) },
+				DomBehaviorDefinitionId = behavior.FirstOrDefault()?.ID,
 			};
 		}
 		catch(Exception ex)
